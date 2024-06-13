@@ -1,0 +1,20 @@
+Hola Raul!!! este es un tutorial para que puedas instalar el programa y se lo puedas mostrar al profesor Enriquez
+
+1.- crea una carpeta en el ESCRITORIO de tu computadora y llamala Reconocimiento
+2.- Descarga el codigo desde este link https://github.com/JairoAlan/Recono_JR le das clic en code (boton verde) y en Download Zip
+3.- descomprimes el programa dentro de la carpeta que creaste en el ESCRITORIO
+4.- Abre el Visual studio Code, desppues le das click en File o archivo, y abrir un Folder o Open folder, y abres el folder que creaste en tu ESCRITORIO
+5.- Abres una terminal en Terminal> Nuevo Terminal Creas el ambiente virtual: virtuaenv venv "O el nombre que quieras"
+6.- Activas el ambiente desde la terminal con el comando ./"venv" 'o el nombre que eligiste'/Scripts/activate
+7.- Sabras que ya se activo por que en la terminal te aparece el nombre del ambiente
+8.- Asegurate que el contenido del programa este dentro de la carpeta ESCRITORIO
+9.- Haz click en la Terminal y ejecutas lo siguiente: pip install -r requirements.txt
+10.- Despues de que se instale todo lo necesario, puede ejecutar el comando en la terminal: python test_model.py
+Se tardara un poco pero el programa comenzara a cargarse
+11.- Se tiene que visualizar el programa, cualquier cosa me dices
+
+Nota: Digamos que en este programa ya "entrenamos la neurona" con fotos, pero aun esta mal, le dices al profesor que 
+estamos descargando un dataset de fotos mas grande para entrenarla... y si vez que como que no se convense, le dices que 
+los estamos generando con IA (Imagenizando se llama el proceso), utilizando una api que se llama diffusers.
+
+Aun asi yo mañana lo voy a buscar a su oficina para explicarle que no voy a poder ayudarte.
