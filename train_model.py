@@ -2,7 +2,7 @@ import pickle
 
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix
 
 # Load data from the text file
@@ -21,14 +21,9 @@ X_train, X_test, y_train, y_test = train_test_split(X,
                                                     shuffle=True,
                                                     stratify=y)
 
-# Initialize the Random Forest Classifier
-rf_classifier = RandomForestClassifier()
-
-# Train the classifier on the training data
-rf_classifier.fit(X_train, y_train)
-
-# Make predictions on the test data
-y_pred = rf_classifier.predict(X_test)
+lr_classifier = LogisticRegression(max_iter=200)
+lr_classifier.fit(X_train, y_train)
+y_pred = lr_classifier.predict(X_test)
 
 # Evaluate the accuracy of the model
 accuracy = accuracy_score(y_test, y_pred)
@@ -36,4 +31,4 @@ print(f"Accuracy: {accuracy * 100:.2f}%")
 print(confusion_matrix(y_test, y_pred))
 
 with open('./model', 'wb') as f:
-    pickle.dump(rf_classifier, f)
+    pickle.dump(lr_classifier, f)

@@ -2,7 +2,7 @@ import cv2
 import pickle
 from utils import get_face_landmarks
 
-emotions = ["Normal","Feliz","Triste", "Sorprendido"]
+emotions = ["Feliz","Triste", "Sorprendido"]
 
 
 with open('./model','rb') as f:
@@ -15,7 +15,7 @@ ret,frame = cap.read()
 while ret:
     ret,frame = cap.read()
     
-    face_landmarks = get_face_landmarks(frame, draw=True,static_image_mode=False)
+    face_landmarks = get_face_landmarks(frame, draw=False ,static_image_mode=False)
     
     output = model.predict([face_landmarks])
     
