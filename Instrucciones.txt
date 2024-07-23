@@ -9,12 +9,13 @@ Hola Raul!!! este es un tutorial para que puedas instalar el programa y se lo pu
 7.- Sabras que ya se activo por que en la terminal te aparece el nombre del ambiente
 8.- Asegurate que el contenido del programa este dentro de la carpeta ESCRITORIO
 9.- Haz click en la Terminal y ejecutas lo siguiente: pip install -r requirements.txt
-10.- Despues de que se instale todo lo necesario, puede ejecutar el comando en la terminal: python test_model.py
-Se tardara un poco pero el programa comenzara a cargarse
-11.- Se tiene que visualizar el programa, cualquier cosa me dices
+10.- Despues de que se instale todo lo necesario, puede ejecutar el comando en la terminal: uvicorn app:app --reload
+11.- En la terminal se mostrara distintos valores:
+Will watch for changes in these directories: ['C:\\Users\\Su Usuario\\Desktop\\ambiente']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit) <----------Copian esta direccion url y la pegan en el navegador
+INFO:     Started reloader process [27852] using WatchFiles
+INFO:     Started server process [71228]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
 
-Nota: Digamos que en este programa ya "entrenamos la neurona" con fotos, pero aun esta mal, le dices al profesor que 
-estamos descargando un dataset de fotos mas grande para entrenarla... y si vez que como que no se convense, le dices que 
-los estamos generando con IA (Imagenizando se llama el proceso), utilizando una api que se llama diffusers.
-
-Aun asi yo mañana lo voy a buscar a su oficina para explicarle que no voy a poder ayudarte.
+12.- y en teoria ya quedo les mostra la aplicacion en su browser.
