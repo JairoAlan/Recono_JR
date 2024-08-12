@@ -1,23 +1,28 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-
-  <title>Detecccion en tiempo real de emociones del cliente</title>
+  <title>Detección en tiempo real de emociones del cliente</title>
 </head>
-
 <body>
   <div class="container">
-    <h1 class="my-3">Detecccion en tiempo real de emociones del cliente</h1>
-    <form id="form-connect">
+    <h1 class="my-3">Detección en tiempo real de emociones del cliente</h1>
+    <form id="form-register">
+      <div class="mb-3">
+        <label for="client-name" class="form-label">Nombre del Cliente</label>
+        <input type="text" class="form-control" id="client-name" required>
+      </div>
+      <button class="btn btn-primary" type="submit">Registrar</button>
+    </form>
+    <form id="form-connect" style="display: none;">
       <div class="input-group mb-3">
         <select id="camera-select"></select>
         <button class="btn btn-success" type="submit" id="button-start">Iniciar</button>
+        <button class="btn btn-danger" type="button" id="button-stop">Detener</button>
+        <button class="btn btn-info" id="button-download" style="display: none;">Descargar Registro de Emociones</button>
       </div>
     </form>
     <div class="position-relative">
@@ -25,8 +30,6 @@
       <canvas id="canvas" class="position-absolute top-0 start-0"></canvas>
     </div>
   </div>
-
   <script src="/static/script.js"></script>
 </body>
-
 </html>
